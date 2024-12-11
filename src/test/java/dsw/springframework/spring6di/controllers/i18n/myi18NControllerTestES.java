@@ -1,19 +1,19 @@
-package dsw.springframework.spring6di.controllers;
+package dsw.springframework.spring6di.controllers.i18n;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
+@ActiveProfiles("ES")
 @SpringBootTest
-@ActiveProfiles("dev")
-class DataSourceControllerTest {
+class myi18NControllerTestES {
 
     @Autowired
-    private DataSourceController dataSourceController;
-    
+    Myi18NController myi18NController;
+
     @Test
-    void getDataSource() {  
-        System.out.println(dataSourceController.getDataSource());
+    void sayHello() {
+        System.out.println(myi18NController.sayHello());
     }
 }

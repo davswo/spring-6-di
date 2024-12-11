@@ -3,12 +3,12 @@ package dsw.springframework.spring6di.services;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+
+@Profile("uat")
 @Service
-@Profile({"dev", "default"})
-public class DevDataSourceService implements DataSourceService {
-    
+public class EnvironmentServiceUat implements EnvironmentService {
     @Override
-    public String getDataSource() {
-        return "dev-data-source";
+    public String getEnv() {
+        return "uat";
     }
 }

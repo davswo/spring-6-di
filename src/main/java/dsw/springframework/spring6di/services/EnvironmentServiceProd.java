@@ -3,12 +3,12 @@ package dsw.springframework.spring6di.services;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+
+@Profile("prod")
 @Service
-@Profile("qa")
-public class QaDataSourceService implements DataSourceService {
-    
+public class EnvironmentServiceProd implements EnvironmentService {
     @Override
-    public String getDataSource() {
-        return "qa-data-source";
+    public String getEnv() {
+        return "prod";
     }
 }
